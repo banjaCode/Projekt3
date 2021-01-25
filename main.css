@@ -1,0 +1,93 @@
+:root {
+    --primary-color: black;
+    --secondary-color: white;
+    --third-color: violet;
+  }
+  
+  * {
+    list-style-type: none;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "roboto";
+    font-size: 16px;
+    margin: 0%;
+    padding: 0%;
+  }
+  
+  body {
+    list-style-type: none;
+    list-style: none;
+    display: grid;
+    color: black;
+    background-color: whitesmoke;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgb(54, 53, 53);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: blueviolet;
+  }
+  
+  main {
+    margin-left: 5rem;
+    padding: 1rem;
+    max-width: 50vw;
+  }
+  
+  .navbar {
+    list-style-type: none;
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--third-color);
+    transition: width 200ms ease;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .nav-item {
+    width: 100%;
+  }
+  
+  .nav-item:last-child {
+    background-color: orangered;
+    margin-top: auto;
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--secondary-color);
+  }
+  
+  .link-text {
+    display: none;
+    margin-left: 1rem;
+  }
+  
+  .nav-link svg {
+    min-width: 2rem;
+    margin: 0 1.5rem;
+  }
+  
+  .navbar:hover {
+    width: 16rem;
+    transition: width 200ms ease;
+  }
+  
+  .navbar:hover .link-text {
+    display: block;
+  }
+  
