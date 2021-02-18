@@ -52,12 +52,7 @@ main {
 .navbar-nav {
   display: flex;
   flex-direction: column;
-  align-items: center;
   height: 100%;
-}
-
-.nav-item {
-  width: 100%;
 }
 
 .nav-item:last-child {
@@ -73,38 +68,45 @@ main {
 }
 
 .link-text {
-  display: block;
-  visibility: hidden;
+  display: none;
   transform: translateX(-175%);
-  margin-left: 1rem;
 }
 
 .nav-link .far {
   font-size: 2.5rem;
-  margin: 0 1.5rem;
-  transform: translateX(-175%);
+  transform: translate(50%);
   color: black;
-  transition: width 400ms ease;
+  transition: 400ms ease;
 }
 
 .navbar:hover {
-  width: 9rem;
+  width: 10.5rem;
   transition: transfrom 400ms ease;
+}
+.nav-link:hover {
+  background-color: blueviolet;
 }
 
 .navbar:hover .link-text {
-  visibility: visible;
+  display: block;
   transform: translateX(0%);
-  transition: transform 30ms;
+  width: 50%;
+  margin-left: 1rem;
+  animation: mymove 1000ms alternate;
+
 }
 
-.navbar:hover .nav-link .far {
-  transform: translateX(25%);
-  transition: transfrom 400ms ease;
+@keyframes mymove {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+ }
 }
 
 
-#body-sign-up:active body {
-display: none;
-}
+
+
 
