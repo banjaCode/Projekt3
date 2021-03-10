@@ -1,7 +1,18 @@
-//use strict
+function submitQuiz() {
+    let points = 0; 
 
-let answers = document.querySelector("background_color");
+    let answers = document.querySelectorAll("input[type='radio']:checked");
+  
+    for (let index = 0; index < answers.length; index++) {
+      points += parseInt(answers[index].value);
+    }
 
-function next_page(){
-    document.querySelector(".navbar").innerHTML = answers;
-}
+    document.querySelector(".correct-answers").innerHTML = points;
+    document.querySelector(".result").classList.toggle("invisible");
+  }
+  
+  function resetQuiz() {
+    document.querySelector(".result").classList.toggle("invisible");
+  
+    document.querySelector(".questions").reset();
+  }
