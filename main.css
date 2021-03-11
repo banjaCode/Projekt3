@@ -203,7 +203,7 @@ button{
 footer {
   display: flex;
   height: 15vh;
-  background: orange;
+  background: rgb(95, 64, 7);
   justify-content: center;
   align-items: center;
   margin-top: auto;
